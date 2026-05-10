@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact — Syntxis</title>
+  <meta name="description" content="Send a question, a pushback, or something you found interesting." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@700&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css">
+  <link rel="stylesheet" href="../style.css" />
+  <style>
+    .nav-brand { font-family: 'Manrope', sans-serif; font-weight: 700; font-size: 17px; letter-spacing: -0.03em; color: #1B2A4A; text-decoration: none; }
+    .nav-brand .x { color: #F5B800; }
+    footer p { color: #ffffff; }
+    .form-group { margin-bottom: 1.25rem; }
+    label { display: block; font-size: 0.82rem; font-weight: 600; color: #1B2A4A; margin-bottom: 0.4rem; }
+    input[type=text], input[type=email], textarea {
+      width: 100%; padding: 0.65rem 0.9rem;
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: 0.9rem; color: #1B2A4A;
+      background: #fff; border: 1px solid #D1D5DB;
+      border-radius: 3px; outline: none;
+      transition: border-color 0.15s;
+    }
+    input[type=text]:focus, input[type=email]:focus, textarea:focus { border-color: #1B2A4A; }
+    textarea { resize: vertical; min-height: 140px; line-height: 1.6; }
+    .submit-btn {
+      display: inline-flex; align-items: center; gap: 7px;
+      padding: 0.65rem 1.5rem; font-size: 0.9rem; font-weight: 600;
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      border: none; border-radius: 3px;
+      background: #F5B800; color: #1B2A4A;
+      cursor: pointer; transition: background 0.15s;
+    }
+    .submit-btn:hover { background: #e0a800; }
+    .note { font-size: 0.8rem; color: #6B7280; margin-top: 0.75rem; }
+  </style>
+</head>
+<body>
+
+<nav>
+  <a href="../" class="nav-brand">synt<span class="x">x</span>is</a>
+  <ul class="nav-links">
+    <li><a href="../blog/">Blog</a></li>
+    <li><a href="../about/">About</a></li>
+    <li><a href="../contact/" class="active">Contact</a></li>
+  </ul>
+  <button class="nav-toggle" aria-label="Toggle menu" onclick="toggleNav()">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<div class="nav-mobile" id="navMobile">
+  <a href="../blog/">Blog</a>
+  <a href="../about/">About</a>
+  <a href="../contact/">Contact</a>
+</div>
+
+<main>
+
+  <section style="padding: 3rem 1.5rem 1.5rem;">
+    <div class="container">
+      <span class="tag">Contact</span>
+      <h1>Read something worth responding to?</h1>
+      <p style="margin-top: 1rem; max-width: 480px; color: #4B5563;">
+        Send a question, a pushback, or just something you found interesting. I read everything. Response time varies — this runs alongside a full-time job.
+      </p>
+    </div>
+  </section>
+
+  <section style="padding: 1rem 1.5rem 3rem;">
+    <div class="container">
+      <hr style="margin: 0 0 2rem;" />
+
+      <form action="https://formspree.io/f/xgodpade" method="POST">
+
+        <div class="form-group">
+          <label for="name">
+            <i class="ti ti-user" style="font-size: 14px; vertical-align: -2px; margin-right: 5px;" aria-hidden="true"></i>Name
+          </label>
+          <input type="text" id="name" name="name" placeholder="Your name" required />
+        </div>
+
+        <div class="form-group">
+          <label for="email">
+            <i class="ti ti-mail" style="font-size: 14px; vertical-align: -2px; margin-right: 5px;" aria-hidden="true"></i>Email
+          </label>
+          <input type="email" id="email" name="email" placeholder="you@example.com" required />
+        </div>
+
+        <div class="form-group">
+          <label for="message">
+            <i class="ti ti-message" style="font-size: 14px; vertical-align: -2px; margin-right: 5px;" aria-hidden="true"></i>Message
+          </label>
+          <textarea id="message" name="message" placeholder="What's on your mind?" required></textarea>
+        </div>
+
+        <button type="submit" class="submit-btn">
+          Send message <i class="ti ti-send" style="font-size: 15px;"></i>
+        </button>
+
+        <p class="note">No newsletters, no follow-up sequences. Just a reply if I have something useful to say.</p>
+
+      </form>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <p>© 2025 Syntxis · Written in Singapore</p>
+</footer>
+
+<script>
+  function toggleNav() {
+    document.getElementById('navMobile').classList.toggle('open');
+  }
+</script>
+
+</body>
+</html>
